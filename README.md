@@ -30,3 +30,18 @@ $.dotTip({
 ```
 * 效果图
 > ![闪烁点提示信息](dotTip/dotTip.jpg "闪烁点提示信息")
+
+## 颜色HEX与RGBA之间转换 - colorTrans
+* 示例代码
+```javascript
+console.log($.colorTrans("#FC0"));
+console.log($.colorTrans("#DAFBFC", false));
+console.log($.colorTrans("rgba(214, 124, 137, .5)", true));
+console.log($.colorTrans("rgb(255, 166, 0)", true));
+```
+* 参数说明
+    * 第一个参数（必填）：要转换的字符串
+    * 第二个参数（非必填）：true从RGB或RGBA转HEX  false则从HEX转RGBA
+* 返回结果{}
+    * 从RGB或RGBA转HEX：{COLOR:...,OPACITY:...}
+    * 从HEX转RGBA：{STR:...,RGB:...,RGBA:...}

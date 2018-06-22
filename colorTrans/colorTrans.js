@@ -1,7 +1,7 @@
 ;(function ($, window, document, undefined) {
     $.colorTrans = function () {
         var str = arguments[0] || ''; //要转换的字符串
-        var bool = arguments[1] || false; //bool为true 从RGB或RGBA转# 为false则从#转RGBA
+        var bool = arguments[1] || false; //bool为true 从RGB或RGBA转HEX 为false则从HEX转RGBA
         var num = [], hex = {};
         var r = 0, g = 0, b = 0, a = 1;
         str = str.toUpperCase(); //统一大写
