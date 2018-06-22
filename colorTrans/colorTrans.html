@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>colorTrans</title>
+</head>
+<body>
+
+<script src="../jquery-3.3.1.min.js"></script>
+<script src="colorTrans.js"></script>
+<script>
+    $(function () {
+        console.log($.colorTrans("#FC0"));
+        console.log($.colorTrans("#DAFBFC", false));
+        console.log($.colorTrans("rgba(214, 124, 137, .5)", true));
+        console.log($.colorTrans("rgb(255, 166, 0)", true));
+    });
+</script>
+</body>
+</html>
