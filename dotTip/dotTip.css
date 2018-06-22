@@ -11,59 +11,10 @@
     border-radius: 50%;
     -webkit-transition: opacity .5s;
     transition: opacity .5s;
-    -moz-animation: act 1s ease infinite;
-    -webkit-animation: act 1s ease infinite;
-    -o-animation: act 1s ease infinite;
-    animation: act 1s ease infinite;
 }
 
 .dot-tip .base .dot {
     border-radius: 50%;
-}
-
-@-webkit-keyframes act {
-    0% {
-        border-color: rgba(241, 255, 17, .8);
-        box-shadow: 0 0 8px 2px rgba(241, 255, 17, .8);
-    }
-    50% {
-        border-color: rgba(241, 255, 17, .2);
-        box-shadow: 0 0 8px 2px rgba(241, 255, 17, .2);
-    }
-    100% {
-        border-color: rgba(241, 255, 17, .8);
-        box-shadow: 0 0 8px 2px rgba(241, 255, 17, .8);
-    }
-}
-
-@-moz-keyframes act {
-    0% {
-        border-color: rgba(241, 255, 17, .8);
-        box-shadow: 0 0 8px 2px rgba(241, 255, 17, .8);
-    }
-    50% {
-        border-color: rgba(241, 255, 17, .2);
-        box-shadow: 0 0 8px 2px rgba(241, 255, 17, .2);
-    }
-    100% {
-        border-color: rgba(241, 255, 17, .8);
-        box-shadow: 0 0 8px 2px rgba(241, 255, 17, .8);
-    }
-}
-
-@keyframes act {
-    0% {
-        border-color: rgba(241, 255, 17, .8);
-        box-shadow: 0 0 8px 2px rgba(241, 255, 17, .8);
-    }
-    50% {
-        border-color: rgba(241, 255, 17, .2);
-        box-shadow: 0 0 8px 2px rgba(241, 255, 17, .2);
-    }
-    100% {
-        border-color: rgba(241, 255, 17, .8);
-        box-shadow: 0 0 8px 2px rgba(241, 255, 17, .8);
-    }
 }
 
 .dot-tip .line {

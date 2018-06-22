@@ -20,6 +20,12 @@
         var ol = Math.max.apply(null, ot.split('<br>').map(function (value) {
             return value.length;
         })); //文字描述长度，如有换行取最大值
+
+        var rgb = '241, 255, 17';
+        if (lc.indexOf('#') !== -1 && $.colorTrans) {
+            rgb = $.colorTrans(lc).STR;
+        }
+
         var al = Math.abs(la);
         var l1 = parseInt((dr + dp * 2 + db * 2) / 2); //线1定位：距左
         var t1 = parseInt((dr + dp * 2 + db) / 2); //线1定位：距上
@@ -30,7 +36,7 @@
         var lt = l2 + lw2 + parseInt(of / 2); //文字定位：距左
         var tt = t2 - parseInt(of / 2); //文字定位：距上
 
-        var stl = '',tal = '';
+        var stl = '', tal = '';
         if (al > 90) {
             stl = '-webkit-transform:rotate(-180deg);transform:rotate(-180deg);-webkit-transition:width .5s;transition:width .5s;-webkit-transition-delay:1s;transition-delay:1s;';
             tal = 'text-align:right;';
@@ -38,14 +44,17 @@
         } else {
             stl = '-webkit-transition-delay:1s;transition-delay:1s;';
         }
+        var l = $('.dot-tip').length, sty = '';
         var dotHtml = '<div class="dot-tip" style="left:' + pl + 'px;top:' + pt + 'px;">';
-        dotHtml += '<div class="base" style="border-color:' + lc + ';background-color:' + lb + ';width:' + dr + 'px;height:' + dr + 'px;padding:' + dp + 'px;border-width:' + db + 'px;">' +
+        dotHtml += '<div class="base" style="border-color:' + lc + ';background-color:' + lb + ';width:' + dr + 'px;height:' + dr + 'px;padding:' + dp + 'px;border-width:' + db + 'px;-webkit-animation:act' + l + ' 1s ease infinite;animation:act' + l + ' 1s ease infinite;">' +
             '<div class="dot" style="background-color:' + lc + ';width:' + dr + 'px;height:' + dr + 'px;"></div>' +
             '</div>';
         dotHtml += '<div class="line line1" style="background-color:' + lc + ';-webkit-transform:rotate(' + la + 'deg);transform:rotate(' + la + 'deg);height:' + db + 'px;left:' + l1 + 'px;top:' + t1 + 'px;"></div>';
         dotHtml += '<div class="line line2" style="background-color:' + lc + ';height:' + db + 'px;left:' + l2 + 'px;top:' + t2 + 'px;' + stl + '"></div>';
         dotHtml += '<div class="text" style="left:' + lt + 'px;top:' + tt + 'px;font-size:' + of + 'px;font-weight:' + ob + ';color: ' + oc + ';' + tal + '">' + ot + '</div>';
         dotHtml += '</div>';
+        sty = '@-webkit-keyframes act' + l + ' {0% {border-color: rgba(' + rgb + ', .8);box-shadow: 0 0 8px 2px rgba(' + rgb + ', .8);}50% {border-color: rgba(' + rgb + ', .2);box-shadow: 0 0 8px 2px rgba(' + rgb + ', .2);}100% {border-color: rgba(' + rgb + ', .8);box-shadow: 0 0 8px 2px rgba(' + rgb + ', .8);}}@keyframes act' + l + ' {0% {border-color: rgba(' + rgb + ', .8);box-shadow: 0 0 8px 2px rgba(' + rgb + ', .8);}50% {border-color: rgba(' + rgb + ', .2);box-shadow: 0 0 8px 2px rgba(' + rgb + ', .2);}100% {border-color: rgba(' + rgb + ', .8);box-shadow: 0 0 8px 2px rgba(' + rgb + ', .8);}}';
+        $('head').append('<style>' + sty + '</style>');
         op.append(dotHtml);
         var $d = op.find('.dot-tip:last');
         setTimeout(function () {
