@@ -1,9 +1,6 @@
 # 个人开发jQuery插件库
 
-## dotTip
-### 闪烁点提示信息
-* 效果图
-> ![闪烁点提示信息](dotTip/dotTip.jpg "闪烁点提示信息")
+## 闪烁点提示信息 - dotTip
 * 示例代码
 ```javascript
 //最简单写法
@@ -31,3 +28,5 @@ $.dotTip({
     "obj_delay": 1500 //延时加载
 });
 ```
+* 效果图
+> ![闪烁点提示信息](dotTip/dotTip.jpg "闪烁点提示信息")
