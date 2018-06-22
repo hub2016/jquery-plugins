@@ -1,6 +1,4 @@
-# jquery-plugins
-jQuery插件库
+# 个人开发jQuery插件库
 
-
-#dotTip
-闪烁点提示信息
+## dotTip
+> 闪烁点提示信息
