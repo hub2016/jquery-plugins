@@ -1,6 +1,7 @@
 # 个人开发jQuery插件库
 
 ## 闪烁点提示信息 - dotTip
+*<font color="#dd0000">文字中如果包含非中文字符，大部分显示位置都会有偏差（除了线2水平，且|线1角度|<90度正常）</font>*
 * 示例代码
 ```javascript
 //最简单写法
@@ -16,6 +17,7 @@ $.dotTip({
     "dot_radius": 12, //点内直径
     "dot_padding": 5, //点内边距
     "dot_border": 2, //点边框宽度
+    "line_horizontal": 2, //1、线1水平向右/2、线2水平/3、线1水平向左
     "line_angle": -145, //斜线角度
     "line_width1": 80, //线1长度
     "line_width2": 40, //线2长度

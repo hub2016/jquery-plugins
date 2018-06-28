@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="dotTip.css">
 </head>
 <body>
-<div id="dot" style="position: relative;background-color: #333;height: 400px;">
+<div id="dot" style="position:relative;overflow:hidden;background-color:#333;height:600px;">
 
 </div>
 <script src="../jquery-3.3.1.min.js"></script>
@@ -14,20 +14,91 @@
 <script src="dotTip.js"></script>
 <script>
     $(function () {
-        //最简单写法
+        //最简写法
         $.dotTip({
-            "obj_text": "只要一个文本信息"
+            "pos_top": 100,
+            "obj_text": "最简写法"
+        });
+        $.dotTip({
+            "pos_top": 100,
+            "pos_left": 350,
+            "obj_text": "水平向左"
+        });
+        $.dotTip({
+            "pos_top": 100,
+            "pos_left": 150,
+            "line_horizontal": 3,
+            "obj_text": "水平向右"
+        });
+        $.dotTip({
+            "pos_top": 100,
+            "pos_left": 550,
+            "line_horizontal": 2,
+            "obj_text": "线二水平"
+        });
+        $.dotTip({
+            "pos_top": 250,
+            "pos_left": 50,
+            "line_angle": -60,
+            "line_horizontal": 2,
+            "obj_text": "线一负六十度，线二水平"
+        });
+        $.dotTip({
+            "pos_top": 250,
+            "pos_left": 200,
+            "line_angle": 60,
+            "line_horizontal": 2,
+            "obj_text": "线一六十度，线二水平"
+        });
+        $.dotTip({
+            "pos_top": 280,
+            "pos_left": 350,
+            "line_angle": -60,
+            "obj_text": "线一水平，线二负六十度"
+        });
+        $.dotTip({
+            "pos_top": 250,
+            "pos_left": 650,
+            "line_angle": 60,
+            "obj_text": "线一水平，线二六十度"
+        });
+        $.dotTip({
+            "pos_top": 450,
+            "pos_left": 450,
+            "line_angle": -120,
+            "line_horizontal": 2,
+            "obj_text": "线一负一二零度<br>线二水平"
+        });
+        $.dotTip({
+            "pos_top": 450,
+            "pos_left": 400,
+            "line_angle": 120,
+            "line_horizontal": 2,
+            "obj_text": "线一一二零度<br>线二水平"
+        });
+        $.dotTip({
+            "pos_top": 450,
+            "pos_left": 550,
+            "line_angle": -120,
+            "obj_text": "线一水平<br>线二负一二零度"
+        });
+        $.dotTip({
+            "pos_top": 450,
+            "pos_left": 700,
+            "line_angle": 120,
+            "obj_text": "线一水平<br>线二一二零度"
         });
 
         //最全参数写法
         $.dotTip({
             "obj_pos": $('#dot'), //存放容器
-            "pos_left": 400, //整体定位：距左
+            "pos_left": 650, //整体定位：距左
             "pos_top": 100, //整体定位：距上
             "dot_radius": 12, //点内直径
             "dot_padding": 5, //点内边距
             "dot_border": 2, //点边框宽度
-            "line_angle": -145, //斜线角度
+            "line_horizontal": 2, //1、线1水平向右/2、线2水平/3、线1水平向左
+            "line_angle": 60, //斜线角度
             "line_width1": 80, //线1长度
             "line_width2": 40, //线2长度
             "line_color": "#F1FF11", //线条颜色、圆点内圈颜色

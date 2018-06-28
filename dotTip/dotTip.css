@@ -32,6 +32,7 @@
     white-space: nowrap;
     opacity: 0;
     line-height: 1;
+    text-align: center;
     -webkit-transition: opacity 1s;
     transition: opacity 1s;
     -webkit-transition-delay: 1.5s;
