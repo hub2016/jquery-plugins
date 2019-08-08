@@ -1,0 +1,44 @@
+
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery功能强大的图片查看器插件|DEMO_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+    <link rel="stylesheet" href="css/viewer.css">
+</head>
+<body>
+<div class="htmleaf-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-md-6">
+                <h3 class="page-header">Demo</h3>
+                <div class="docs-galley">
+                    <ul class="docs-pictures clearfix">
+                        <li><img data-original="http://demo.htmleaf.com/1509/201509031731/assets/img/emma-watson-1.jpg" src="http://demo.htmleaf.com/1509/201509031731/assets/img/thumbnails/emma-watson-1.jpg"></li>
+                        <li><img data-original="http://demo.htmleaf.com/1509/201509031731/assets/img/emma-watson-2.jpg" src="http://demo.htmleaf.com/1509/201509031731/assets/img/thumbnails/emma-watson-2.jpg"></li>
+                        <li><img data-original="http://demo.htmleaf.com/1509/201509031731/assets/img/emma-watson-3.jpg" src="http://demo.htmleaf.com/1509/201509031731/assets/img/thumbnails/emma-watson-3.jpg"></li>
+                        <li><img data-original="http://demo.htmleaf.com/1509/201509031731/assets/img/emma-watson-4.jpg" src="http://demo.htmleaf.com/1509/201509031731/assets/img/thumbnails/emma-watson-4.jpg"></li>
+                        <li><img data-original="http://demo.htmleaf.com/1509/201509031731/assets/img/emma-watson-5.jpg" src="http://demo.htmleaf.com/1509/201509031731/assets/img/thumbnails/emma-watson-5.jpg"></li>
+                        <li><img data-original="http://demo.htmleaf.com/1509/201509031731/assets/img/emma-watson-6.jpg" src="http://demo.htmleaf.com/1509/201509031731/assets/img/thumbnails/emma-watson-6.jpg"></li>
+                        <li><img data-original="http://demo.htmleaf.com/1509/201509031731/assets/img/emma-watson-7.jpg" src="http://demo.htmleaf.com/1509/201509031731/assets/img/thumbnails/emma-watson-7.jpg"></li>
+                        <li><img data-original="http://demo.htmleaf.com/1509/201509031731/assets/img/emma-watson-8.jpg" src="http://demo.htmleaf.com/1509/201509031731/assets/img/thumbnails/emma-watson-8.jpg"></li>
+                        <li><img data-original="http://demo.htmleaf.com/1509/201509031731/assets/img/emma-watson-9.jpg" src="http://demo.htmleaf.com/1509/201509031731/assets/img/thumbnails/emma-watson-9.jpg"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="js/jquery.min.js"></script>
+<script src="js/viewer.js"></script>
+<script>
+    $(function () {
+        $('.docs-pictures').viewer({url: 'data-original'});
+    });
+</script>
+</body>
+</html>
